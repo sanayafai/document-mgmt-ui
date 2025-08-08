@@ -1,0 +1,152 @@
+/* app.css */
+
+/* Apply a consistent box-sizing across all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling to add some padding around the content */
+body {
+  font-family: 'Arial', sans-serif;  /* Clean sans-serif font */
+  background-color: #f4f7fc;        /* Light background for the whole app */
+  color: #333;                      /* Dark text for readability */
+  line-height: 1.5;
+  padding: 20px;                     /* Add padding to the body */
+  margin: 0;                         /* Ensure there's no margin */
+}
+
+/* Styling for the main app container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;                /* Ensure the app takes full height */
+  padding: 20px;                    /* Add padding to give space around the content */
+  background-color: #ffffff;        /* White background */
+  border-radius: 8px;               /* Round corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Header styles */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;         /* Round the top corners of the header */
+  margin-bottom: 20px;                 /* Space below the header */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;                     /* Larger title */
+  text-align: center;
+}
+
+/* Navbar styling */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;                            /* Space between links */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #0056b3;           /* Darker blue on hover */
+}
+
+nav a.active {
+  background-color: #004080;           /* Active link gets a different color */
+}
+
+/* Main section (where the routed components will appear) */
+main {
+  padding: 20px;
+  flex-grow: 1;                         /* Make sure it takes up remaining space */
+}
+
+/* Global link styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Global button styling */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Global error message style */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .app-container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;                 /* Smaller title on mobile */
+  }
+
+  nav a {
+    font-size: 0.875rem;               /* Smaller links on mobile */
+  }
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Space between links */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;  /* Ensure pointer cursor */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
