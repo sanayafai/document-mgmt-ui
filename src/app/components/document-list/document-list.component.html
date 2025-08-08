@@ -1,0 +1,10 @@
+<!-- document-list.component.html -->
+<div class="document-list-container">
+  <h2>Documents</h2>
+  <ul>
+    <li *ngFor="let document of documents">
+      {{ document.name }}
+      <button (click)="deleteDocument(document.id)">Delete</button>
+    </li>
+  </ul>
+</div>
